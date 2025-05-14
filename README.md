@@ -4,4 +4,6 @@
 
 Open-source code for play Labyrinth Created using [Godotengine.org]("https://godotengine.org/")
 
-<!-- GitAds-Verify: W37JBGESE84RNFDUMIZWH11TU8EMQYFS -->
+## GitAds Sponsored
+[![Sponsored by GitAds](https://gitads.dev/v1/ad-serve?source=danb1551/labyrint@github)](https://gitads.dev/v1/ad-track?source=danb1551/labyrint@github)
+
