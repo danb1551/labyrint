@@ -1,0 +1,57 @@
+[gd_scene load_steps=4 format=3 uid="uid://co4b3b7b2ys7q"]
+
+[ext_resource type="Script" uid="uid://c08066aym2sv3" path="res://scripty/submit_name_button.gd" id="1_0fbet"]
+
+[sub_resource type="Gradient" id="Gradient_uchyk"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_0fbet"]
+gradient = SubResource("Gradient_uchyk")
+width = 178
+fill_from = Vector2(0, 1)
+fill_to = Vector2(0, 1)
+metadata/_snap_count = 100
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0fbet")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+metadata/_edit_lock_ = true
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -24.0
+offset_right = 76.0
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "fffff"
+icon = SubResource("GradientTexture2D_0fbet")
+icon_alignment = 1
+expand_icon = true
+
+[node name="LineEdit" type="LineEdit" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -180.0
+offset_top = 214.0
+offset_right = 180.0
+offset_bottom = 245.0
+grow_horizontal = 2
+placeholder_text = "Zde zadej své jméno..."
