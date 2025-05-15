@@ -1,6 +1,7 @@
-[gd_scene load_steps=45 format=3 uid="uid://bbknnyblfxwma"]
+[gd_scene load_steps=51 format=3 uid="uid://bbknnyblfxwma"]
 
 [ext_resource type="Script" uid="uid://dt4t81km7asme" path="res://scripty/Player.gd" id="1_kyxg0"]
+[ext_resource type="ArrayMesh" uid="uid://dovkcsj7w3ya8" path="res://tinker.obj" id="2_mc20k"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_kyxg0"]
 
@@ -15,7 +16,7 @@ radius = 0.936189
 height = 4.75305
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kyxg0"]
-size = Vector3(1, 13.6274, 99.9604)
+size = Vector3(1, 13.6274, 94.9491)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cove1"]
 
@@ -26,6 +27,15 @@ size = Vector3(1, 13.6274, 99.9604)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dn5ey"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lmyl5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jl3d8"]
+size = Vector3(8.87695, 7.17883, 5.61182)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a2cb0"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3gjqj"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_g56ap"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_mc20k"]
 size = Vector3(0.673705, 13.6427, 9.65071)
@@ -109,6 +119,8 @@ size = Vector3(1, 13.6968, 15.0363)
 
 [sub_resource type="BoxMesh" id="BoxMesh_e0n1a"]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mc20k"]
+
 [node name="Level1" type="Node3D"]
 
 [node name="Podlaha" type="StaticBody3D" parent="."]
@@ -170,9 +182,20 @@ mesh = SubResource("BoxMesh_mc20k")
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="Zdi"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -49.4311, 6.66129, -0.0104218)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -49.4311, 6.66129, -2.51609)
 shape = SubResource("BoxShape3D_kyxg0")
 metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Zdi"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -53.9494, 1.54498, 47.0603)
+shape = SubResource("BoxShape3D_jl3d8")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Zdi"]
+transform = Transform3D(7.20676, 0, 0, 0, 5.10673, 0, 0, 0, 6.07725, -54.9453, 2.30436, 47.0107)
+material_override = SubResource("StandardMaterial3D_a2cb0")
+material_overlay = SubResource("StandardMaterial3D_3gjqj")
+mesh = SubResource("BoxMesh_g56ap")
 
 [node name="steny_jedny" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.3112, 12.005, 43.2118)
@@ -509,6 +532,123 @@ material_override = SubResource("StandardMaterial3D_jl3d8")
 material_overlay = SubResource("StandardMaterial3D_58k54")
 mesh = SubResource("BoxMesh_e0n1a")
 
+[node name="zed_zet_osa10" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.7479, 9.39849, -25.1285)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="zed_zet_osa10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.79881, 6.2877, -0.00244379)
+shape = SubResource("BoxShape3D_3jhf0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="zed_zet_osa10"]
+transform = Transform3D(1.24237, 0, 0, 0, 12.7307, 0, 0, 0, 15.0835, 2.77345, 6.85892, 0)
+material_override = SubResource("StandardMaterial3D_jl3d8")
+material_overlay = SubResource("StandardMaterial3D_58k54")
+mesh = SubResource("BoxMesh_e0n1a")
+
+[node name="zed_zet_osa11" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.7479, 9.39849, -35.5607)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="zed_zet_osa11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.79881, 6.2877, -0.00244379)
+shape = SubResource("BoxShape3D_3jhf0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="zed_zet_osa11"]
+transform = Transform3D(1.24237, 0, 0, 0, 12.7307, 0, 0, 0, 15.0835, 2.77345, 6.85892, 0)
+material_override = SubResource("StandardMaterial3D_jl3d8")
+material_overlay = SubResource("StandardMaterial3D_58k54")
+mesh = SubResource("BoxMesh_e0n1a")
+
+[node name="zed_zet_osa12" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.3566, 9.39849, -35.5607)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="zed_zet_osa12"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.79881, 6.2877, -0.00244379)
+shape = SubResource("BoxShape3D_3jhf0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="zed_zet_osa12"]
+transform = Transform3D(1.24237, 0, 0, 0, 12.7307, 0, 0, 0, 15.0835, 2.77345, 6.85892, 0)
+material_override = SubResource("StandardMaterial3D_jl3d8")
+material_overlay = SubResource("StandardMaterial3D_58k54")
+mesh = SubResource("BoxMesh_e0n1a")
+
+[node name="zed_zet_osa13" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.54565, 9.39849, -20.8771)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="zed_zet_osa13"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.79881, 6.2877, -0.00244379)
+shape = SubResource("BoxShape3D_3jhf0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="zed_zet_osa13"]
+transform = Transform3D(1.24237, 0, 0, 0, 12.7307, 0, 0, 0, 15.0835, 2.77345, 6.85892, 0)
+material_override = SubResource("StandardMaterial3D_jl3d8")
+material_overlay = SubResource("StandardMaterial3D_58k54")
+mesh = SubResource("BoxMesh_e0n1a")
+
+[node name="zed_zet_osa14" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.38093, 9.39849, -35.9138)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="zed_zet_osa14"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.79881, 6.2877, -0.00244379)
+shape = SubResource("BoxShape3D_3jhf0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="zed_zet_osa14"]
+transform = Transform3D(1.24237, 0, 0, 0, 12.7307, 0, 0, 0, 15.0835, 2.77345, 6.85892, 0)
+material_override = SubResource("StandardMaterial3D_jl3d8")
+material_overlay = SubResource("StandardMaterial3D_58k54")
+mesh = SubResource("BoxMesh_e0n1a")
+
+[node name="zed_zet_osa15" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.1109, 9.39849, -33.9661)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="zed_zet_osa15"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.79881, 6.2877, -0.00244379)
+shape = SubResource("BoxShape3D_3jhf0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="zed_zet_osa15"]
+transform = Transform3D(1.24237, 0, 0, 0, 12.7307, 0, 0, 0, 15.0835, 2.77345, 6.85892, 0)
+material_override = SubResource("StandardMaterial3D_jl3d8")
+material_overlay = SubResource("StandardMaterial3D_58k54")
+mesh = SubResource("BoxMesh_e0n1a")
+
+[node name="zed_zet_osa16" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.1109, 9.39849, -19.3375)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="zed_zet_osa16"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.79881, 6.2877, -0.00244379)
+shape = SubResource("BoxShape3D_3jhf0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="zed_zet_osa16"]
+transform = Transform3D(1.24237, 0, 0, 0, 12.7307, 0, 0, 0, 15.0835, 2.77345, 6.85892, 0)
+material_override = SubResource("StandardMaterial3D_jl3d8")
+material_overlay = SubResource("StandardMaterial3D_58k54")
+mesh = SubResource("BoxMesh_e0n1a")
+
+[node name="zed_zet_osa8" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5552, 9.39849, -5.09578)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="zed_zet_osa8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.79881, 6.2877, -0.00244379)
+shape = SubResource("BoxShape3D_3jhf0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="zed_zet_osa8"]
+transform = Transform3D(1.24237, 0, 0, 0, 12.7307, 0, 0, 0, 15.0835, 2.77345, 6.85892, 0)
+material_override = SubResource("StandardMaterial3D_jl3d8")
+material_overlay = SubResource("StandardMaterial3D_58k54")
+mesh = SubResource("BoxMesh_e0n1a")
+
+[node name="zed_zet_osa9" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.0151, 9.39849, 6.35225)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="zed_zet_osa9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.79881, 6.2877, -0.00244379)
+shape = SubResource("BoxShape3D_3jhf0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="zed_zet_osa9"]
+transform = Transform3D(1.24237, 0, 0, 0, 12.7307, 0, 0, 0, 15.0835, 2.77345, 6.85892, 0)
+material_override = SubResource("StandardMaterial3D_jl3d8")
+material_overlay = SubResource("StandardMaterial3D_58k54")
+mesh = SubResource("BoxMesh_e0n1a")
+
 [node name="zed_zet_osa2" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.0676, 9.39849, 21.0302)
 
@@ -535,6 +675,97 @@ material_override = SubResource("StandardMaterial3D_jl3d8")
 material_overlay = SubResource("StandardMaterial3D_58k54")
 mesh = SubResource("BoxMesh_e0n1a")
 
+[node name="zed_x_osa17" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 11.3081, 9.35907, -36.8156)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="zed_x_osa17"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.79881, 6.2877, -0.00244379)
+shape = SubResource("BoxShape3D_3jhf0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="zed_x_osa17"]
+transform = Transform3D(1.24237, 0, 0, 0, 12.7307, 0, 0, 0, 15.0835, 2.77345, 6.85892, 0)
+material_override = SubResource("StandardMaterial3D_jl3d8")
+material_overlay = SubResource("StandardMaterial3D_58k54")
+mesh = SubResource("BoxMesh_e0n1a")
+
+[node name="zed_x_osa18" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 11.3081, 9.35907, -15.679)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="zed_x_osa18"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.79881, 6.2877, -0.00244379)
+shape = SubResource("BoxShape3D_3jhf0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="zed_x_osa18"]
+transform = Transform3D(1.24237, 0, 0, 0, 12.7307, 0, 0, 0, 15.0835, 2.77345, 6.85892, 0)
+material_override = SubResource("StandardMaterial3D_jl3d8")
+material_overlay = SubResource("StandardMaterial3D_58k54")
+mesh = SubResource("BoxMesh_e0n1a")
+
+[node name="zed_x_osa19" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3.41957, 9.35907, -36.8724)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="zed_x_osa19"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.79881, 6.2877, -0.00244379)
+shape = SubResource("BoxShape3D_3jhf0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="zed_x_osa19"]
+transform = Transform3D(1.24237, 0, 0, 0, 12.7307, 0, 0, 0, 15.0835, 2.77345, 6.85892, 0)
+material_override = SubResource("StandardMaterial3D_jl3d8")
+material_overlay = SubResource("StandardMaterial3D_58k54")
+mesh = SubResource("BoxMesh_e0n1a")
+
+[node name="zed_x_osa20" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 33.5672, 9.35907, -38.0679)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="zed_x_osa20"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.79881, 6.2877, -0.00244379)
+shape = SubResource("BoxShape3D_3jhf0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="zed_x_osa20"]
+transform = Transform3D(1.24237, 0, 0, 0, 12.7307, 0, 0, 0, 15.0835, 2.77345, 6.85892, 0)
+material_override = SubResource("StandardMaterial3D_jl3d8")
+material_overlay = SubResource("StandardMaterial3D_58k54")
+mesh = SubResource("BoxMesh_e0n1a")
+
+[node name="zed_x_osa21" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 41.935, 9.35907, -22.7908)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="zed_x_osa21"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.79881, 6.2877, -0.00244379)
+shape = SubResource("BoxShape3D_3jhf0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="zed_x_osa21"]
+transform = Transform3D(1.24237, 0, 0, 0, 12.7307, 0, 0, 0, 15.0835, 2.77345, 6.85892, 0)
+material_override = SubResource("StandardMaterial3D_jl3d8")
+material_overlay = SubResource("StandardMaterial3D_58k54")
+mesh = SubResource("BoxMesh_e0n1a")
+
+[node name="zed_x_osa22" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 33.4379, 9.35907, -30.8073)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="zed_x_osa22"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.79881, 6.2877, -0.00244379)
+shape = SubResource("BoxShape3D_3jhf0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="zed_x_osa22"]
+transform = Transform3D(1.24237, 0, 0, 0, 12.7307, 0, 0, 0, 15.0835, 2.77345, 6.85892, 0)
+material_override = SubResource("StandardMaterial3D_jl3d8")
+material_overlay = SubResource("StandardMaterial3D_58k54")
+mesh = SubResource("BoxMesh_e0n1a")
+
+[node name="zed_x_osa16" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.19941, 9.35907, -26.1878)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="zed_x_osa16"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.79881, 6.2877, -0.00244379)
+shape = SubResource("BoxShape3D_3jhf0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="zed_x_osa16"]
+transform = Transform3D(1.24237, 0, 0, 0, 12.7307, 0, 0, 0, 15.0835, 2.77345, 6.85892, 0)
+material_override = SubResource("StandardMaterial3D_jl3d8")
+material_overlay = SubResource("StandardMaterial3D_58k54")
+mesh = SubResource("BoxMesh_e0n1a")
+
 [node name="zed_x_osa10" type="StaticBody3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.2324, 9.35907, 4.58014)
 
@@ -543,6 +774,58 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.79881, 6.2877, -0.00244379)
 shape = SubResource("BoxShape3D_3jhf0")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="zed_x_osa10"]
+transform = Transform3D(1.24237, 0, 0, 0, 12.7307, 0, 0, 0, 15.0835, 2.77345, 6.85892, 0)
+material_override = SubResource("StandardMaterial3D_jl3d8")
+material_overlay = SubResource("StandardMaterial3D_58k54")
+mesh = SubResource("BoxMesh_e0n1a")
+
+[node name="zed_x_osa15" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -23.4786, 9.35907, -25.8646)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="zed_x_osa15"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.79881, 6.2877, -0.00244379)
+shape = SubResource("BoxShape3D_3jhf0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="zed_x_osa15"]
+transform = Transform3D(1.24237, 0, 0, 0, 12.7307, 0, 0, 0, 15.0835, 2.77345, 6.85892, 0)
+material_override = SubResource("StandardMaterial3D_jl3d8")
+material_overlay = SubResource("StandardMaterial3D_58k54")
+mesh = SubResource("BoxMesh_e0n1a")
+
+[node name="zed_x_osa13" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -30.8812, 9.35907, -15.2348)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="zed_x_osa13"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.79881, 6.2877, -0.00244379)
+shape = SubResource("BoxShape3D_3jhf0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="zed_x_osa13"]
+transform = Transform3D(1.24237, 0, 0, 0, 12.7307, 0, 0, 0, 15.0835, 2.77345, 6.85892, 0)
+material_override = SubResource("StandardMaterial3D_jl3d8")
+material_overlay = SubResource("StandardMaterial3D_58k54")
+mesh = SubResource("BoxMesh_e0n1a")
+
+[node name="zed_x_osa14" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -9.76781, 9.35907, -9.30857)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="zed_x_osa14"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.79881, 6.2877, -0.00244379)
+shape = SubResource("BoxShape3D_3jhf0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="zed_x_osa14"]
+transform = Transform3D(1.24237, 0, 0, 0, 12.7307, 0, 0, 0, 15.0835, 2.77345, 6.85892, 0)
+material_override = SubResource("StandardMaterial3D_jl3d8")
+material_overlay = SubResource("StandardMaterial3D_58k54")
+mesh = SubResource("BoxMesh_e0n1a")
+
+[node name="zed_x_osa12" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31.0128, 9.35907, 1.54332)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="zed_x_osa12"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.79881, 6.2877, -0.00244379)
+shape = SubResource("BoxShape3D_3jhf0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="zed_x_osa12"]
 transform = Transform3D(1.24237, 0, 0, 0, 12.7307, 0, 0, 0, 15.0835, 2.77345, 6.85892, 0)
 material_override = SubResource("StandardMaterial3D_jl3d8")
 material_overlay = SubResource("StandardMaterial3D_58k54")
@@ -671,3 +954,11 @@ spot_range = 124.228
 spot_attenuation = 0.0
 spot_angle = 89.76
 spot_angle_attenuation = 4.5948
+
+[node name="nadpis" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -79.2429, 14.3145, 42.3399)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="nadpis"]
+transform = Transform3D(-0.601033, 0, 1.18379, 0, 0.698764, 0, -0.601033, 0, -1.18379, 5.40202, -13.2825, 17.2734)
+mesh = ExtResource("2_mc20k")
+surface_material_override/0 = SubResource("ShaderMaterial_mc20k")
