@@ -5,4 +5,5 @@ func _ready():
 
 func _on_button_pressed():
 	var text = $LineEdit.text
+	get_tree().change_scene_to_file("res://Level1.tscn")
 	print("Zadaný text:", text)

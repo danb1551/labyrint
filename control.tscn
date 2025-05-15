@@ -28,30 +28,25 @@ metadata/_edit_lock_ = true
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
+anchors_preset = 4
 anchor_top = 0.5
-anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -76.0
-offset_top = -24.0
-offset_right = 76.0
-offset_bottom = 36.0
-grow_horizontal = 2
+offset_left = 192.0
+offset_top = -20.0
+offset_right = 344.0
+offset_bottom = 40.0
 grow_vertical = 2
 text = "fffff"
 icon = SubResource("GradientTexture2D_0fbet")
 icon_alignment = 1
 expand_icon = true
+metadata/_edit_lock_ = true
 
 [node name="LineEdit" type="LineEdit" parent="."]
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -180.0
-offset_top = 214.0
-offset_right = 180.0
-offset_bottom = 245.0
-grow_horizontal = 2
+offset_left = 100.0
+offset_top = 205.0
+offset_right = 460.0
+offset_bottom = 236.0
 placeholder_text = "Zde zadej své jméno..."
+metadata/_edit_lock_ = true
